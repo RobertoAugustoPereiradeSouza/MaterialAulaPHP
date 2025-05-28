@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de login</title>
+    <title>Sistema de Login</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.7.1.min.js" defer></script>
+    <script src="js/bootstrap.js" defer></script>
 </head>
 <body>
-<div class="container-fluid">
-<div class="d-flex flex-column align-items-center col-6">
-    <div class="col-12">
-    <form method="post">
-    <div class="form-group row">
-    <div class="col-12">
-    Digite o seu nome de usuário:<input class="form-control form-control-lg" type="text" name="Login" placeholder="Nome..."></input><br>
-        </div>
-        <div class="col-12">
-        Digite a sua senha: <input class="form-control form-control-lg" type="password" name="Password" placeholder="Senha..."></input><br>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header bg-info">
 </div>
-        <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-lg btn-block" value="Entrar" >Entrar</button>
-        </div>
-</div>
-</form>
-</div>
+                    <div class="card-body">
+                        <h4> Sistema de Login</h4>
+
+                    <form action="" method="POST">
+                <label>Digite seu nome: </label><br>
+        
+                    <input type="text" name="nome" class="form-control" id="nome" placeholder="nome..."></input>
+                    <label> Digite sua senha: </label>
+                    <input type="password" name="senha" class="form-control" id="senha" placeholder="senha..."></input>
+                    <input type="submit" class="btn btn-outline-primary mt-3" method="POST"></input>
+                    <br>
+            </form>
+                    </div>
+                        <div class="card-footer bg-info">
+                    </div>
+            </div>
+        </div>         
+    </div>
 </div>
 </body>
-<?php
-if (isset($_POST['Login']) && isset($_POST))
-        SESSION_start();
-$SESSION['Login'] = $Login;
-$SESSION['Password'] = $Password;
-?>
 </html>
